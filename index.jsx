@@ -14,12 +14,9 @@ import {
 
 export default function WysiwygEditor({text}) {
 
-  const data=[{"type":"h1","children":[{"text":"Hello World! "}]},{"type":"h2","children":[{"text":"This is my paragraph inside "}]},{"type":"h3","children":[{"text":"a sample document."}]},{"type":"paragraph","children":[{"text":"khdkwahkfahk","bold":true,"italic":true,"underline":true}]}];
-  const [document,updateDocument]=useState(data);
-  useCallback(()=>{
+  const [document,updateDocument]=useState(text);
 
-  },[])
-  //why comment out and save this, will render page
+ 
   const handleSave=()=>{
      fetch("http://localhost:3000/save",{
       method:'POST',
