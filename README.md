@@ -19,3 +19,5 @@ This is a simple text editor built with Slate.js that allows you to format text 
 editor :
 
 ![alt text](https://github.com/Wendy-B-Hub/WYSIWYG-slate.js/blob/main/editor.jpg)
+
+in order to fecth data and render data parallelly, we use `useQuery` hook
