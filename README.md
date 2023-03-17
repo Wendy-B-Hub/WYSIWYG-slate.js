@@ -22,7 +22,7 @@ This is a simple text editor built with Slate.js that allows you to format text 
 
 ## data fetch from database 
 
-in order to fecth data and render data parallelly, we use `useQuery` hook
+in order to fecth data and render data parallelly, we use `useQuery` hook in `fetchData.jsx`
 
 the index of main react project
 
@@ -43,6 +43,32 @@ root.render(
   </React.StrictMode>
 );
 
+```
+
+`fetchData.jsx` to fetch data and pass it as prop to `WysiwygEditor` component
+```javascript
+// the better approach would be fetching data and rendering it parallelly useQuery
+export default function FetchData({id,collection}){
+  const url = `${BASE_URL}/${collection}/${id}`;
+  const { data, isLoading, isError } = useQuery('myData', async () => {
+    const response =await axios.get(url);
+    const data = response.data;
+    console.log(data)
+    return data;
+  });
+  if (isLoading){
+    return <div>loading...</div>
+  }
+  if (isError){
+    return <div>error...</div>
+  }
+
+  return(
+      <>
+        <WysiwygEditor text={data}/>
+      </>
+  )
+}
 ```
 
 ## data transfer flow 
