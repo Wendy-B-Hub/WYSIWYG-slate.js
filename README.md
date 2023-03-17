@@ -71,7 +71,7 @@ export default function FetchData({id,collection}){
 }
 ```
 
-## data transfer flow 
+## data transfer workflow 
 
 
 
