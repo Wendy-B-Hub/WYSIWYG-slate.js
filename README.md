@@ -16,12 +16,13 @@ This is a simple text editor built with Slate.js that allows you to format text 
 - Headings: Select text and click the "H1" or "H2" or "H3" or "H4" button to turn it into a heading.
 
 
-editor :
+## editor :
 
 ![alt text](https://github.com/Wendy-B-Hub/WYSIWYG-slate.js/blob/main/editor.jpg)
 
-in order to fecth data and render data parallelly, we use `useQuery` hook
+## data fetch from database 
 
+in order to fecth data and render data parallelly, we use `useQuery` hook
 
 the index of main react project
 
@@ -44,8 +45,9 @@ root.render(
 
 ```
 
+## data transfer flow 
 
-data transfer flow :
+
 
                        ┌─────────┐                        ┌──────────────┐
                        │ React   │                        │ This Repo    │
@@ -62,22 +64,22 @@ data transfer flow :
                       (2)    ▼                                      │
                   ┌───────────────┐                                 │
                   │This Repo      │                                 │
-                  │.fetchData    <───────────────────────────────────┘
+                  │.fetchData    <──────────────────────────────────1
                   └───────────────┘                                 │
                              │                                      │
                       (3)    ▼                                      │
                   ┌───────────────┐                                 │
                   │This Repo      │                                 │
-                  │.index        │                                 │
+                  │index.js       │                                 │
                   └───────────────┘                                 │
                              │                                      │
                       (4)    ▼                                      │
                   ┌───────────────┐                                 │
                   │This Repo      │                                 │
-                  │Components.   │                                 │
-                  │Editor        │                                 │
+                  │/Components/   │                                 │
+                  │Editor        │                                  │
                   └───────────────┘                                 │
                              │                                      │
                              └─────────────────────────────────────>│
-                                                                      │
+                                                                     
 
