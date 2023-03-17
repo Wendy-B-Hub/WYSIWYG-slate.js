@@ -14,7 +14,7 @@ import {
 
 export default function WysiwygEditor({text}) {
 
-  const data=[{"type":"h1","children":[{"text":"Hello World! "}]},{"type":"h2","children":[{"text":"This is my paragraph inside "}]},{"type":"h3","children":[{"text":"a sample document."}]},{"type":"paragraph","children":[{"text":"khdkwahkfahk","bold":true,"italic":true,"underline":true}]},{"type":"paragraph","children":[{"text":"今天是我的生日，我的祖国"}]}];
+  const data=[{"type":"h1","children":[{"text":"Hello World! "}]},{"type":"h2","children":[{"text":"This is my paragraph inside "}]},{"type":"h3","children":[{"text":"a sample document."}]},{"type":"paragraph","children":[{"text":"khdkwahkfahk","bold":true,"italic":true,"underline":true}]}];
   const [document,updateDocument]=useState(data);
   useCallback(()=>{
 
